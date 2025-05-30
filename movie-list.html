@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary meta tags -->
+    <meta
+      name="description"
+      content="MatrixPlus is a technology company that has a product called MatrixPlus,
+      which offers movies for the entertainment of our customers. Produced by Felipe Rodrigues Alves & Fernando Rodrigues Alves."
+    />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./matrix-icone.png" type="image/svg+xml" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- custom js link -->
+    <script src="./assets/js/global.js" defer></script>
+    <script src="./assets/js/movie-list.js" type="module"></script>
+  </head>
+
+  <body>
+    <!-- #HEADER -->
+    <header class="header">
+      <a href="./index.html" class="logo">
+        <img
+          src="./assets/images/matrix-logo.png"
+          width="200"
+          height="50"
+          alt="MatrixPlus home"
+        />
+      </a>
+
+      <!-- Botão Logout (novo) -->
+      <button id="logout-btn" class="btn logout-button" style="display: none;">
+        <img src="./assets/images/logout-icon.png" width="24" height="24" alt="Logout" />
+        <span>Sair</span>
+      </button>
+
+      <div class="search-box" search-box>
+        <div class="search-wrapper" search-wrapper>
+          <input
+            type="text"
+            name="search"
+            aria-label="search movies"
+            placeholder="Search"
+            autocomplete="off"
+            class="search-field"
+            search-field
+          />
+          <img
+            src="./assets/images/search.png"
+            width="24"
+            height="24"
+            alt="search"
+            class="leading-icon"
+          />
+        </div>
+
+        <button class="search-btn" search-toggler>
+          <img
+            src="./assets/images/close.png"
+            width="24"
+            height="24"
+            alt="close search box"
+          />
+        </button>
+      </div>
+
+      <div class="search-btn" search-toggler menu-close>
+        <img
+          src="./assets/images/search.png"
+          width="24"
+          height="24"
+          alt="open search box"
+        />
+      </div>
+
+      <button class="menu-btn" menu-btn menu-toggler>
+        <img
+          src="./assets/images/menu.png"
+          width="24"
+          height="24"
+          alt="open menu"
+          class="menu"
+        />
+        <img
+          src="./assets/images/menu-close.png"
+          width="24"
+          height="24"
+          alt="close menu"
+          class="close"
+        />
+      </button>
+    </header>
+
+    <!--Chatbot MatrixPlus -->
+<div class="chatbot-container">
+  <div class="chatbot-header">
+    <h3>NeoAI (Chatbot)</h3>
+    <button id="chatbot-close">✖</button>
+  </div>
+  <div class="chatbot-messages" id="chatbot-messages">
+  <div class="bot-message">Olá! Eu sou NeoAI. Como posso te ajudar hoje? Para dicas de filmes digite: "filmes de (gênero)" ou "filmes (escolha o país)."</div>
+  <div class="bot-message">Para suporte, ajuda ou usabilidade do site. Digite: "1" para login, "2" para erro</div>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatbot-input" placeholder="Digite sua mensagem..." />
+    <button id="chatbot-send">Enviar</button>
+  </div>
+</div>
+
+<!-- Botão flutuante para abrir o chatbot -->
+<button id="chatbot-toggle" class="chatbot-toggle">💬</button>
+<script src="./assets/js/chatbot.js" defer></script>
+
+    <main>
+      <!-- #SIDEBAR -->
+      <nav class="sidebar" sidebar></nav>
+      <div class="overlay" overlay menu-toggler></div>
+
+      <article class="container" page-content></article>
+    </main>
+    <script src="./assets/js/vlibras.js"></script>
+  </body>
+</html>

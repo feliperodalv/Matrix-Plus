@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - MatrixPlus</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./matrix-icone.png" type="image/svg+xml" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+  <!-- Firebase Config -->
+  <script src="./assets/js/firebase-config.js"></script>
+
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Script Login -->
+  <script src="./assets/js/login.js" defer></script>
+</head>
+
+<body>
+
+  <div class="login-container">
+    <h1 class="login-title">MatrixPlus</h1>
+
+    <!-- Formulário de Login -->
+    <form id="login-form" class="login-form">
+      <input type="email" id="email" placeholder="Email" required class="login-input" />
+      <input type="password" id="password" placeholder="Senha" required class="login-input" />
+      <button type="submit" class="login-button">Entrar</button>
+
+      <!-- Botão Google -->
+      <button id="google-login" type="button" class="btn google-button">
+        <img src="./assets/images/google-icon.png" width="24" height="24" alt="Google" />
+        <span>Entrar com Google</span>
+      </button>
+
+      <!-- Botão Facebook -->
+      <button id="facebook-login" type="button" class="btn facebook-button">
+        <img src="./assets/images/facebook-icon.png" width="24" height="24" alt="Facebook" />
+        <span>Entrar com Facebook</span>
+      </button>
+
+      <!-- Link para recuperar senha -->
+      <p class="login-text">
+        <a id="forgot-password" class="login-link">Esqueci minha senha</a>
+      </p>
+    </form>
+
+    <p class="login-text">Não tem uma conta? <a id="register-link" class="login-link">Registrar-se</a></p>
+
+    <!-- Formulário de Cadastro -->
+    <form id="register-form" style="display: none;" class="login-form">
+      <input type="email" id="register-email" placeholder="Email" required class="login-input" />
+      <input type="password" id="register-password" placeholder="Senha" required class="login-input" />
+      <button type="submit" class="login-button">Cadastrar</button>
+      <button type="button" id="back-to-login" class="login-button">Voltar ao login</button>
+    </form>
+  </div>
+
+  <script src="./assets/js/vlibras.js"></script>
+</body>
+</html>
